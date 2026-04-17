@@ -48,35 +48,39 @@ body::before{
   height:500px;
   background:#4f46e5;
   filter:blur(150px);
-  opacity:0.5;
+  opacity:0.4;
   top:-150px;
   left:50%;
   transform:translateX(-50%);
 }
 
-/* Floating animation */
-@keyframes float {
-  0% {transform: translateY(0px);}
-  50% {transform: translateY(-15px);}
-  100% {transform: translateY(0px);}
-}
-
+/* TITLE FIXED (NO GRADIENT BUG) */
 h1{
-  font-size:48px;
-  background:linear-gradient(90deg,#22c55e,#6366f1,#0ea5e9);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  font-size:52px;
+  color:#ffffff;
+  text-shadow:
+    0 0 10px rgba(99,102,241,0.8),
+    0 0 25px rgba(34,197,94,0.5);
   animation:fadeIn 1s ease-in-out, float 4s ease-in-out infinite;
 }
 
+/* TEXT */
 p{
   color:#cbd5e1;
   max-width:700px;
   margin:20px auto;
   animation:fadeIn 1.5s ease-in-out;
+  font-size:16px;
 }
 
-/* Buttons */
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-12px);}
+  100% {transform: translateY(0px);}
+}
+
+/* BUTTONS FIXED */
 .btn{
   display:inline-block;
   padding:14px 28px;
@@ -89,6 +93,7 @@ p{
 
 .primary{
   background:linear-gradient(45deg,#6366f1,#22c55e);
+  color:white;
   box-shadow:0 0 20px rgba(99,102,241,0.6);
 }
 
@@ -99,7 +104,8 @@ p{
 
 .secondary{
   border:1px solid #6366f1;
-  color:#6366f1;
+  color:white;
+  background:rgba(99,102,241,0.15);
 }
 
 .secondary:hover{
@@ -107,7 +113,7 @@ p{
   color:white;
 }
 
-/* FEATURES */
+/* SECTIONS */
 .section{
   padding:80px 20px;
 }
@@ -138,14 +144,14 @@ img{
   margin-bottom:10px;
 }
 
-/* Footer */
+/* FOOTER */
 footer{
   text-align:center;
   padding:40px;
   color:#94a3b8;
 }
 
-/* Animations */
+/* ANIMATION */
 @keyframes fadeIn{
   from{opacity:0; transform:translateY(20px);}
   to{opacity:1; transform:translateY(0);}
@@ -161,8 +167,8 @@ footer{
 <h1>MCQify.com</h1>
 
 <p>
-Futuristic learning platform designed to transform your study experience into
-interactive MCQ practice with analytics, tracking, and offline access.
+Futuristic MCQ learning platform designed to help students and professionals
+practice exams, track progress, and improve performance with smart analytics.
 </p>
 
 <div style="margin-top:30px;">
@@ -181,19 +187,19 @@ interactive MCQ practice with analytics, tracking, and offline access.
 <div class="card">
 <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
 <h3>Smart Practice</h3>
-<p>Practice exams with instant feedback and adaptive learning.</p>
+<p>Instant feedback with adaptive learning system.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1584697964403-6c1c0e3b7c0d">
 <h3>Analytics</h3>
-<p>Track your progress with detailed performance insights.</p>
+<p>Track your progress and identify weak points.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
 <h3>Offline Mode</h3>
-<p>Continue learning anytime without internet connection.</p>
+<p>Study anywhere without internet connection.</p>
 </div>
 
 </div>
@@ -202,7 +208,7 @@ interactive MCQ practice with analytics, tracking, and offline access.
 <!-- CTA -->
 <div class="section" style="text-align:center;">
 <h2>Start Your Journey</h2>
-<p>Level up your knowledge with next-generation MCQ training.</p>
+<p>Level up your knowledge with MCQify smart practice system.</p>
 
 <div style="margin-top:20px;">
 <a class="btn primary" href="#">Download App</a>
